@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Team Sync Meeting",
+    "date": "2025-06-25",
+    "time": "10:00",
+    "duration": 60,
+    "type": "Meeting",
+    "color": "#60a5fa"
+  },
+  {
+    "title": "Design Review",
+    "date": "2025-06-25",
+    "time": "10:30",
+    "duration": 45,
+    "type": "Design",
+    "color": "#f472b6"
+  },
+  {
+    "title": "Lunch with Alex",
+    "date": "2025-06-25",
+    "time": "12:00",
+    "duration": 60,
+    "type": "Personal",
+    "color": "#facc15"
+  },
+  {
+    "title": "Client Presentation",
+    "date": "2025-06-26",
+    "time": "15:00",
+    "duration": 30,
+    "type": "Meeting",
+    "color": "#60a5fa"
+  },
+  {
+    "title": "UX Brainstorm",
+    "date": "2025-06-27",
+    "time": "11:00",
+    "duration": 90,
+    "type": "Design",
+    "color": "#f472b6"
+  },
+  {
+    "title": "1:1 with Manager",
+    "date": "2025-06-28",
+    "time": "09:00",
+    "duration": 30,
+    "type": "Personal",
+    "color": "#facc15"
+  }
+]
