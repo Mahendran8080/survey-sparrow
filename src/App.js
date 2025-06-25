@@ -89,43 +89,52 @@ const App = () => {
   };
 
   return (
-    <div className="flex h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+  <div className="flex h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    
+    {/* ✅ Sidebar hidden on mobile */}
+    <div className="hidden md:block">
       <Sidebar conflicts={getConflicts()} />
-      <div className="flex-1 flex flex-col">
-        <Navbar
-          selectedDate={selectedDate}
-          onToday={handleToday}
-          onPrev={handlePrev}
-          onNext={handleNext}
-          view={view}
-          setView={setView}
-          onToggleTheme={toggleTheme}
-          currentTheme={theme}
-        />
-        <main className="flex-1 overflow-auto">
-          {view === 'month' ? (
-            <MonthView
-              selectedDate={selectedDate}
-              events={events}
-              onEventClick={(event) => setSelectedEvent(event)} // ✅ FIXED
-            />
-          ) : (
-            <WeekView
-              events={events}
-              selectedDate={selectedDate}
-              onEventClick={(event) => setSelectedEvent(event)}
-            />
-          )}
-        </main>
-      </div>
-      {selectedEvent && (
-        <EventModal
-          event={selectedEvent}
-          onClose={() => setSelectedEvent(null)}
-        />
-      )}
     </div>
-  );
+
+    {/* Main Content Area */}
+    <div className="flex-1 flex flex-col">
+      <Navbar
+        selectedDate={selectedDate}
+        onToday={handleToday}
+        onPrev={handlePrev}
+        onNext={handleNext}
+        view={view}
+        setView={setView}
+        onToggleTheme={toggleTheme}
+        currentTheme={theme}
+      />
+
+      <main className="flex-1 overflow-auto">
+        {view === 'month' ? (
+          <MonthView
+            selectedDate={selectedDate}
+            events={events}
+            onEventClick={(event) => setSelectedEvent(event)}
+          />
+        ) : (
+          <WeekView
+            events={events}
+            selectedDate={selectedDate}
+            onEventClick={(event) => setSelectedEvent(event)}
+          />
+        )}
+      </main>
+    </div>
+
+    {selectedEvent && (
+      <EventModal
+        event={selectedEvent}
+        onClose={() => setSelectedEvent(null)}
+      />
+    )}
+  </div>
+);
+
 };
 
 export default App;

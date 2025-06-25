@@ -4,7 +4,7 @@ import logo from '../logo.avif'; // Adjust path if needed
 
 const legendItems = [
   { label: 'Office', color: 'bg-blue-500', icon: <CalendarCheck2 size={16} /> },
-  { label: 'Meeting', color: 'bg-green-500', icon: <Users size={16} /> },
+  { label: 'Meeting', color: 'bg-yellow-500', icon: <Users size={16} /> },
   { label: 'Design', color: 'bg-pink-500', icon: <PenTool size={16} /> },
 ];
 
