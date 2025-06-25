@@ -44,7 +44,7 @@ const MonthView = ({ selectedDate, events, onEventClick }) => {
             key={idx}
             className={classNames(
               'bg-white dark:bg-black min-h-[100px] border border-gray-300 dark:border-gray-600 p-1 text-xs overflow-hidden',
-              { 'bg-blue-100 dark:bg-blue-900': isToday }
+              { 'bg-blue-800 dark:bg-blue-900': isToday }
             )}
           >
             <div className="text-xs font-bold mb-1">
